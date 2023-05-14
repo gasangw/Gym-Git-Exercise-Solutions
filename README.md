@@ -214,4 +214,149 @@ To github.com:gasangw/git-Workouts.git
 
 ```
 
+- Exercise 2
 
+```bash
+gasa@Gasanna MINGW64 ~/git-Workouts (ft/bundle-2)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+gasa@Gasanna MINGW64 ~/git-Workouts (main)
+$ git checkout -b ft/service-redesign
+Switched to a new branch 'ft/service-redesign'
+
+gasa@Gasanna MINGW64 ~/git-Workouts (ft/service-redesign)
+$ git pull origin main
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), 631 bytes | 157.00 KiB/s, done.
+From github.com:gasangw/git-Workouts
+ * branch            main       -> FETCH_HEAD
+   6537ce0..38e8795  main       -> origin/main
+Updating 6537ce0..38e8795
+Fast-forward
+ services.html | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+ create mode 100644 services.html
+
+gasa@Gasanna MINGW64 ~/git-Workouts (ft/service-redesign)
+$ git add .
+
+gasa@Gasanna MINGW64 ~/git-Workouts (ft/service-redesign)
+$ git commit -m"Add a paragraph"
+[ft/service-redesign dce4645] Add a paragraph
+ 1 file changed, 1 insertion(+)
+
+gasa@Gasanna MINGW64 ~/git-Workouts (ft/service-redesign)
+$ git push origin ft/service-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 329 bytes | 329.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/gasangw/git-Workouts/pull/new/ft/service-redesign
+remote:
+To github.com:gasangw/git-Workouts.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+
+gasa@Gasanna MINGW64 ~/git-Workouts (main)
+$ git pull origin main
+From github.com:gasangw/git-Workouts
+ * branch            main       -> FETCH_HEAD
+Updating 6537ce0..38e8795
+Fast-forward
+ services.html | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+ create mode 100644 services.html
+
+gasa@Gasanna MINGW64 ~/git-Workouts (main)
+$ git add .
+
+gasa@Gasanna MINGW64 ~/git-Workouts (main)
+$ git commit -m"edit the services page"
+[main 9a1ecdc] edit the services page
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+gasa@Gasanna MINGW64 ~/git-Workouts (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 340 bytes | 340.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:gasangw/git-Workouts.git
+   38e8795..9a1ecdc  main -> main
+
+gasa@Gasanna MINGW64 ~/git-Workouts (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 2 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+gasa@Gasanna MINGW64 ~/git-Workouts (main)
+$ git pull origin main
+From github.com:gasangw/git-Workouts
+ * branch            main       -> FETCH_HEAD
+Updating 6537ce0..38e8795
+Fast-forward
+ services.html | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+ create mode 100644 services.html
+
+gasa@Gasanna MINGW64 ~/git-Workouts (main)
+$ git add .
+
+gasa@Gasanna MINGW64 ~/git-Workouts (main)
+$ git commit -m"edit the services page"
+[main 9a1ecdc] edit the services page
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+gasa@Gasanna MINGW64 ~/git-Workouts (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 340 bytes | 340.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:gasangw/git-Workouts.git
+   38e8795..9a1ecdc  main -> main
+
+gasa@Gasanna MINGW64 ~/git-Workouts (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+
+gasa@Gasanna MINGW64 ~/git-Workouts (ft/service-redesign)
+$ git diff ft/service-redesign main
+diff --git a/services.html b/services.html
+index ce0bdbe..ddea37d 100644
+--- a/services.html
++++ b/services.html
+@@ -7,7 +7,7 @@
+     <title>Services Page</title>
+ </head>
+ <body>
+-    <h1>Checkout our services plzzz</h1>
+-    <p>I love serving meals</p>
++    <h1>Checkout services</h1>
++    <p>hello tomato</p>
+ </body>
+ </html>
+\ No newline at end of file
+
+gasa@Gasanna MINGW64 ~/git-Workouts (ft/service-redesign)
+$ git merge main
+Auto-merging services.html
+CONFLICT (content): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+```
