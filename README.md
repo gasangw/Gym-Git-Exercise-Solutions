@@ -176,4 +176,42 @@ To github.com:gasangw/git-Workouts.git
  * [new branch]      dev -> dev
 ```
 
+## Bundle 2
+
+- Exercise 1
+```bash
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+gasa@Gasanna MINGW64 ~/git-Workouts (main)
+$ git checkout -b ft/bundle-2
+Switched to a new branch 'ft/bundle-2'
+
+gasa@Gasanna MINGW64 ~/git-Workouts (ft/bundle-2)
+$ git add .
+
+gasa@Gasanna MINGW64 ~/git-Workouts (ft/bundle-2)
+$ git commit -m"Add services page and edit the title and create a heading inside"
+[ft/bundle-2 019262b] Add services page and edit the title and create a heading inside
+ 1 file changed, 12 insertions(+)
+ create mode 100644 services.html
+
+gasa@Gasanna MINGW64 ~/git-Workouts (ft/bundle-2)
+$ git push origin ft/bundle-2
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 577 bytes | 577.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/gasangw/git-Workouts/pull/new/ft/bundle-2
+remote:
+To github.com:gasangw/git-Workouts.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+
+```
+
 
