@@ -364,4 +364,4 @@ Automatic merge failed; fix conflicts and then commit the result.
 # Bundle 5
 - Exercise 1
 
-[Github-pages-link](https://github.com/gasangw/git-Workouts/settings/pages)
+[Github-pages-link](https://gasangw.github.io/git-Workouts/)
