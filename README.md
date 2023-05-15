@@ -401,3 +401,47 @@ remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To github.com:gasangw/git-cafe-exercise.git
    d1d3f9c..699f1d2  main -> main
 ```
+
+## Bundle 6
+
+- Exercise 1
+```bash
+
+gasa@Gasanna MINGW64 ~/git-cafe-exercise (main)
+$ git checkout -b feature_menu
+Switched to a new branch 'feature_menu'
+
+gasa@Gasanna MINGW64 ~/git-cafe-exercise (feature_menu)
+$ git add .
+
+gasa@Gasanna MINGW64 ~/git-cafe-exercise (feature_menu)
+$ git status
+On branch feature_menu
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Menu.html
+
+
+gasa@Gasanna MINGW64 ~/git-cafe-exercise (feature_menu)
+$ git commit -m"Create menu file"
+[feature_menu 24fe47a] Create menu file
+ 1 file changed, 12 insertions(+)
+ create mode 100644 Menu.html
+
+gasa@Gasanna MINGW64 ~/git-cafe-exercise (feature_menu)
+$ git push origin feature_menu
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 483 bytes | 483.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'feature_menu' on GitHub by visiting:
+remote:      https://github.com/gasangw/git-cafe-exercise/pull/new/feature_menu
+remote:
+To github.com:gasangw/git-cafe-exercise.git
+ * [new branch]      feature_menu -> feature_menu
+
+```
