@@ -445,3 +445,39 @@ To github.com:gasangw/git-cafe-exercise.git
  * [new branch]      feature_menu -> feature_menu
 
 ```
+- Exercise 2
+```bash
+asa@Gasanna MINGW64 ~/git-cafe-exercise (feature_menu)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+gasa@Gasanna MINGW64 ~/git-cafe-exercise (main)
+$ git checkout -b feature_bug_fix
+Switched to a new branch 'feature_bug_fix'
+
+gasa@Gasanna MINGW64 ~/git-cafe-exercise (feature_bug_fix)
+$ git add .
+
+gasa@Gasanna MINGW64 ~/git-cafe-exercise (feature_bug_fix)
+$ git commit -m"Update the title for the file from menu to contact"
+[feature_bug_fix d471481] Update the title for the file from menu to contact
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+gasa@Gasanna MINGW64 ~/git-cafe-exercise (feature_bug_fix)
+$ git push origin feature_bug_fix
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 322 bytes | 161.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'feature_bug_fix' on GitHub by visiting:
+remote:      https://github.com/gasangw/git-cafe-exercise/pull/new/feature_bug_fix
+remote:
+To github.com:gasangw/git-cafe-exercise.git
+ * [new branch]      feature_bug_fix -> feature_bug_fix
+
+```
