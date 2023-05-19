@@ -361,6 +361,97 @@ Automatic merge failed; fix conflicts and then commit the result.
 
 ```
 
+# Bundle 3
+- Exercise 1
+```bash
+gasa@Gasanna MINGW64 ~/git-Workouts (main)
+$ git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+
+gasa@Gasanna MINGW64 ~/git-Workouts (ft/team-page)
+$ git add .
+
+gasa@Gasanna MINGW64 ~/git-Workouts (ft/team-page)
+$ git commit -m"Create new file called teams and add changes"
+[ft/team-page 87771ba] Create new file called teams and add changes
+ 1 file changed, 12 insertions(+)
+ create mode 100644 team.html
+
+gasa@Gasanna MINGW64 ~/git-Workouts (ft/team-page)
+$ git push origin ft/team-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 483 bytes | 241.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/gasangw/git-Workouts/pull/new/ft/team-page
+remote:
+To github.com:gasangw/git-Workouts.git
+ * [new branch]      ft/team-page -> ft/team-page
+
+gasa@Gasanna MINGW64 ~/git-Workouts (ft/team-page)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+gasa@Gasanna MINGW64 ~/git-Workouts (main)
+$ git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+
+gasa@Gasanna MINGW64 ~/git-Workouts (ft/contact-page)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+
+gasa@Gasanna MINGW64 ~/git-Workouts (ft/team-page)
+$ git log --oneline
+87771ba (HEAD -> ft/team-page, origin/ft/team-page) Create new file called teams and add changes
+9a1ecdc (origin/main, main, ft/contact-page) edit the services page
+38e8795 Merge pull request #1 from gasangw/ft/bundle-2
+019262b (origin/ft/bundle-2, ft/bundle-2) Add services page and edit the title and create a heading inside
+6537ce0 Create file for exercise one and include two html files and one style.css file
+
+gasa@Gasanna MINGW64 ~/git-Workouts (ft/team-page)
+$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+
+gasa@Gasanna MINGW64 ~/git-Workouts (ft/contact-page)
+$ git cherry-pick 87771ba
+[ft/contact-page 9b89078] Create new file called teams and add changes
+ Date: Fri May 19 09:14:01 2023 +0200
+ 1 file changed, 12 insertions(+)
+ create mode 100644 team.html
+
+gasa@Gasanna MINGW64 ~/git-Workouts (ft/contact-page)
+$ git add .
+
+gasa@Gasanna MINGW64 ~/git-Workouts (ft/contact-page)
+$ git commit -m"Add teams file using git cherry-pick"
+[ft/contact-page f5245e4] Add teams file using git cherry-pick
+ 1 file changed, 1 insertion(+)
+
+gasa@Gasanna MINGW64 ~/git-Workouts (ft/contact-page)
+$ git push origin ft/contact-page
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 753 bytes | 753.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/gasangw/git-Workouts/pull/new/ft/contact-page
+remote:
+To github.com:gasangw/git-Workouts.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+
+```
+
+
 # Bundle 5
 - Exercise 1
 
