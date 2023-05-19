@@ -516,6 +516,60 @@ To github.com:gasangw/git-Workouts.git
 
 ```
 
+# Bundle 4
+-Exercise 1
+```bash
+gasa@Gasanna MINGW64 ~/git-Workouts (ft/home-page-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+gasa@Gasanna MINGW64 ~/git-Workouts (main)
+$ git remote add git-copy git@github.com:gasangw/git-workout-clone.git
+
+gasa@Gasanna MINGW64 ~/git-Workouts (main)
+$ git remote
+git-copy
+origin
+
+gasa@Gasanna MINGW64 ~/git-Workouts (main)
+$ git push origin
+Everything up-to-date
+
+gasa@Gasanna MINGW64 ~/git-Workouts (main)
+$ git add .
+
+gasa@Gasanna MINGW64 ~/git-Workouts (main)
+$ git commit -m"Update the home page"
+[main b40d37a] Update the home page
+ 1 file changed, 1 insertion(+)
+
+gasa@Gasanna MINGW64 ~/git-Workouts (main)
+$ git push origin
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 362 bytes | 362.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:gasangw/git-Workouts.git
+   c00d846..b40d37a  main -> main
+
+gasa@Gasanna MINGW64 ~/git-Workouts (main)
+$ git push git-copy
+Enumerating objects: 18, done.
+Counting objects: 100% (18/18), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (17/17), done.
+Writing objects: 100% (18/18), 2.35 KiB | 1.17 MiB/s, done.
+Total 18 (delta 9), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (9/9), done.
+To github.com:gasangw/git-workout-clone.git
+ * [new branch]      main -> main
+
+```
+
 # Bundle 5
 - Exercise 1
 
