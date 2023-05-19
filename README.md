@@ -517,6 +517,7 @@ To github.com:gasangw/git-Workouts.git
 ```
 
 # Bundle 4
+
 -Exercise 1
 ```bash
 gasa@Gasanna MINGW64 ~/git-Workouts (ft/home-page-redesign)
@@ -567,6 +568,95 @@ Total 18 (delta 9), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (9/9), done.
 To github.com:gasangw/git-workout-clone.git
  * [new branch]      main -> main
+
+```
+
+- Exercise 2 
+```bash
+gasa@Gasanna MINGW64 ~/git-Workouts (main)
+$ git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+
+gasa@Gasanna MINGW64 ~/git-Workouts (ft/footer)
+$ git add .
+
+gasa@Gasanna MINGW64 ~/git-Workouts (ft/footer)
+$ git commit -m"Add footer file"
+[ft/footer 9bc183f] Add footer file
+ 1 file changed, 12 insertions(+)
+ create mode 100644 footer.html
+
+gasa@Gasanna MINGW64 ~/git-Workouts (ft/footer)
+$ git add .
+
+gasa@Gasanna MINGW64 ~/git-Workouts (ft/footer)
+$ git commit -m"Create tablet file and update footer file"
+[ft/footer a7bf4ab] Create tablet file and update footer file
+ 2 files changed, 13 insertions(+), 1 deletion(-)
+ create mode 100644 tablets.html
+
+gasa@Gasanna MINGW64 ~/git-Workouts (ft/footer)
+$ git push origin ft/footer
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 829 bytes | 829.00 KiB/s, done.
+Total 7 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/gasangw/git-Workouts/pull/new/ft/footer
+remote:
+To github.com:gasangw/git-Workouts.git
+ * [new branch]      ft/footer -> ft/footer
+
+ gasa@Gasanna MINGW64 ~/git-Workouts (ft/footer)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+gasa@Gasanna MINGW64 ~/git-Workouts (main)
+$ git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+
+gasa@Gasanna MINGW64 ~/git-Workouts (ft/squashing)
+$ git merge --squash ft/footer
+Updating b40d37a..a7bf4ab
+Fast-forward
+Squash commit -- not updating HEAD
+ footer.html  | 12 ++++++++++++
+ tablets.html | 12 ++++++++++++
+ 2 files changed, 24 insertions(+)
+ create mode 100644 footer.html
+ create mode 100644 tablets.html
+
+gasa@Gasanna MINGW64 ~/git-Workouts (ft/squashing)
+$  git add .
+
+gasa@Gasanna MINGW64 ~/git-Workouts (ft/squashing)
+$ git commit -m"footer changes squashing"
+[ft/squashing 15140af] footer changes squashing
+ 2 files changed, 24 insertions(+)
+ create mode 100644 footer.html
+ create mode 100644 tablets.html
+
+gasa@Gasanna MINGW64 ~/git-Workouts (ft/squashing)
+$ git push origin ft/squashing
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 558 bytes | 558.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/gasangw/git-Workouts/pull/new/ft/squashing
+remote:
+To github.com:gasangw/git-Workouts.git
+ * [new branch]      ft/squashing -> ft/squashing
+
 
 ```
 
