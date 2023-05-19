@@ -451,6 +451,70 @@ To github.com:gasangw/git-Workouts.git
 
 ```
 
+- Exercise 2
+```bash
+gasa@Gasanna MINGW64 ~/git-Workouts (ft/faq-page)
+$ git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+
+gasa@Gasanna MINGW64 ~/git-Workouts (ft/home-page-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+gasa@Gasanna MINGW64 ~/git-Workouts (main)
+$ git add .
+
+gasa@Gasanna MINGW64 ~/git-Workouts (main)
+$ git commit -m"update the paragraph"
+[main c00d846] update the paragraph
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+gasa@Gasanna MINGW64 ~/git-Workouts (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 306 bytes | 102.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:gasangw/git-Workouts.git
+   9a1ecdc..c00d846  main -> main
+
+gasa@Gasanna MINGW64 ~/git-Workouts (main)
+$ git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+
+gasa@Gasanna MINGW64 ~/git-Workouts (ft/home-page-redesign)
+$ git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+
+gasa@Gasanna MINGW64 ~/git-Workouts (ft/home-page-redesign)
+$ git add .
+
+gasa@Gasanna MINGW64 ~/git-Workouts (ft/home-page-redesign)
+$ git commit -m"Rebase changes in the main"
+[ft/home-page-redesign f88b1f3] Rebase changes in the main
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+gasa@Gasanna MINGW64 ~/git-Workouts (ft/home-page-redesign)
+$ git push origin ft/home-page-redesign
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (14/14), 1.51 KiB | 772.00 KiB/s, done.
+Total 14 (delta 8), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (8/8), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/gasangw/git-Workouts/pull/new/ft/home-page-redesign
+remote:
+To github.com:gasangw/git-Workouts.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+
+```
 
 # Bundle 5
 - Exercise 1
